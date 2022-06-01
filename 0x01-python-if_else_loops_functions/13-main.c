@@ -30,6 +30,15 @@ int main(void)
     print_listint(head);
 
     free_listint(head);
+    listint_t *head;
+
+    listint_t head1 = NULL;
+    print_listint(head1);
+    
+    printf("-----------------\n");
+    insert_node(&head1, 972);
+    print_listint(head1);
+    free_listint(head1);
 
     return (0);
 }
