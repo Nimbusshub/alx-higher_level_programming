@@ -4,6 +4,6 @@ if __name__ == "__main__":
 result = ""
 for j in dir(bussy):
     result = j
-    if result.startswith('_') == True:
+    if result.startswith('_') is True:
         continue
     print("{}".format(j))
