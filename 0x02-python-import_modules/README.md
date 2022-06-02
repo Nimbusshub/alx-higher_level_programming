@@ -26,4 +26,6 @@ is used to make the definitions in another script accessible to another (where i
 
   Prints all the names defined by the compiled module hidden_4.pyc in alphabetical order. Names that started with - are not printed.
 
-#### `
+#### `5-variable_load.py` ####
+
+  Imports a variable from from variable_load_5.py and print its value.
