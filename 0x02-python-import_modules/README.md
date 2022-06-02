@@ -16,6 +16,14 @@ is used to make the definitions in another script accessible to another (where i
 
 #### `2-args.py` ####
   
-  Write a program that prints the number of and the list of its arguments.
+  Prints the number of and the list of its arguments.
 
+#### `3-infinite_add.py` ####
 
+  Add all the numbers on the command line.
+
+#### `4-hidden_discovery.py` ####
+
+  Prints all the names defined by the compiled module hidden_4.pyc in alphabetical order. Names that started with - are not printed.
+
+#### `
