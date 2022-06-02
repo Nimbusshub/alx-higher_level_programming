@@ -5,6 +5,17 @@ or in an interactive instance of the interpreter (by importing it). Modules can 
 is used to make the definitions in another script accessible to another (where import in being called).
 
 ### Files in the directory ###
+
 #### `0-add.py` ####
 
   Imports the function def add(a, b): from the file add_0.py and prints the result of the addition 1 + 2 = 3.
+
+#### `1-calculation.py` ####
+
+  Calculates a and b.
+
+#### `2-args.py` ####
+  
+  Write a program that prints the number of and the list of its arguments.
+
+
