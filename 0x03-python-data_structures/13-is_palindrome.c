@@ -8,22 +8,24 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *head2 = *head, *head3 = *head;
+	listint_t *head3 = *head;
 	int *pA;
 	int i = 0, j = 0;
 
 	if (head == NULL)
 		return (1);
-	while (head2 != NULL)
-	{
-		i++;
-		head2 = head2->next;
-	}
-	pA = malloc(sizeof(int) * i);
+	/**
+	*while (head2 != NULL)
+	*{
+	*	i++;
+	*	head2 = head2->next;
+	*}
+	*/
+	pA = malloc(sizeof(int) * 30);
 	while (head3 != NULL)
 	{
-		*(pA + j) = head3->n;
-		j++;
+		*(pA + i) = head3->n;
+		i++;
 		head3 = head3->next;
 	}
 	for (j = 0; j < i / 2; j++)
