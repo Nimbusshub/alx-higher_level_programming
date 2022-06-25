@@ -5,7 +5,6 @@
 class Square:
     """A class with a private instance attribute.
     def __init__: initialize class Square.
-        It also checks for TypeError and ValueError.
 
     Args:
         size (int): size of the class Square.
@@ -22,6 +21,7 @@ class Square:
             int: the set instance attribute.
 
         size.setter: set the value of self.__size.
+        It also checks for TypeError and ValueError.
 
         Args:
             value (int): value to initialize self.__size with.
