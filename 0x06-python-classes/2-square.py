@@ -4,7 +4,8 @@
 
 class Square:
     """A class with a private instance attribute.
-    def __init__: initialize class Square. It also checks for Type and Value Error.
+    def __init__: initialize class Square.
+    It also checks for Type and Value Error.
 
     Args:
         size (int): size of the class Square
