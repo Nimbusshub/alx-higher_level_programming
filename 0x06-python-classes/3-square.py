@@ -8,7 +8,7 @@ class Square:
         It also checks for TypeError and ValueError.
 
     Args:
-        size (int): size of the class Square.
+        size (int): size of the class Square
 
     Raises:
         TypeError: if size is not an integer.
@@ -22,3 +22,11 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
+
+    def area(self):
+        """calculates the area of the current square.
+
+        Returns:
+            int: the area of the square.
+        """
+        return self.__size * self.__size
