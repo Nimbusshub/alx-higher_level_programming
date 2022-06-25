@@ -2,9 +2,6 @@
 """ A class Square that defines a square """
 
 
-from typing import Type
-
-
 class Square:
     """A class with a private instance attribute.
     def __init__: initialize class Square. It also checks for Type and Value Error.
