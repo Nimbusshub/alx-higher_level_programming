@@ -94,15 +94,13 @@ class Square:
     def __str__(self):
         """Define the behaviour of Square instance as my_print()"""
 
-        if self.__size == 0:
-            print()
-            return
-        for i in range(self.__position[1]):
-            print()
+        if self.__size != 0:
+            for i in range(self.__position[1]):
+                print()
         for j in range(0, self.__size):
             for k in range(0, self.__position[0]):
                 print(" ", end="")
-            for l in range(self.__size):
+            for m in range(self.__size):
                 print("#", end="")
             if j != self.__size - 1:
                 print("")
