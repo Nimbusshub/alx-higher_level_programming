@@ -104,4 +104,4 @@ class Rectangle:
                 print()
             print("#" * self.__width, end="")
 
-            return ""
+        return ""
