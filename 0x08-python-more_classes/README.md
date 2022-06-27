@@ -43,4 +43,4 @@ $ ./simple_class.py
 
 ### PS
 
-This is a project done during **Full Stack Software Engineering studies** at **ALX_AFRICA**. The objectives of the project is teach ALX-SE students about object oriented programming (OOP), Data Abstraction, Data Encapsulation, instances and classes attributes in **Python**.
+This is a project done during **Full Stack Software Engineering studies** at **ALX_AFRICA**. The objectives of the project is teach **ALX-SE students** about object oriented programming (OOP), Data Abstraction, Data Encapsulation, instances and classes attributes in **Python**.
