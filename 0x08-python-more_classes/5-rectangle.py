@@ -117,4 +117,5 @@ class Rectangle:
         return (container)
 
     def __del__(self):
+        """Prints a message when a rectangle is deleted"""
         print("Bye rectangle...")
