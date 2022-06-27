@@ -90,16 +90,18 @@ class Rectangle:
         return 2 * (self.__height + self.__width)
 
     def __str__(self):
-        """defines the behavior of the objects of class Rectangle to
-        print with character "#"
-        """
+        """Defines the behavior of the objects of class Rectangle.
 
-        if self.__width == 0 or self.__height == 0:
+         Returns:
+             str: print the rectangle with character "#"
+         """
+
+           if self.__width == 0 or self.__height == 0:
+                return ""
+
+            for i in range(self.__height):
+                if i != self.__height and i != 0:
+                    print()
+                print("#" * self.__width, end="")
+
             return ""
-
-        for i in range(self.__height):
-            if i != self.__height and i != 0:
-                print()
-            print("#" * self.__width, end="")
-
-        return ""
