@@ -90,6 +90,12 @@ class Rectangle:
         return 2 * (self.__height + self.__width)
 
     def __str__(self):
+        """Defines the behavior of the objects of class Rectangle.
+
+        Returns:
+            str: print the rectangle with character "#"
+        """
+
         if self.__width == 0 or self.__height == 0:
             return ""
 
@@ -99,3 +105,13 @@ class Rectangle:
             print("#" * self.__width, end="")
 
         return ""
+
+    def __repr__(self):
+        """ Produce string representation of the class Rectangle.
+
+        Returns:
+            str: representation of the class
+        """
+        container = "Rectangle(" + str(self.__width)
+        container += ", " + str(self.__height) + ")"
+        return (container)
