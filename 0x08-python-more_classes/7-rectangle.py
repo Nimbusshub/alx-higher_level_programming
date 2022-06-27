@@ -96,7 +96,8 @@ class Rectangle:
         """Defines the behavior of the objects of class Rectangle.
 
         Returns:
-            str: print the rectangle with character "#"
+            str: initialize and prints the triangle as defined
+            by self.print_symbol.
         """
 
         if self.__width == 0 or self.__height == 0:
@@ -120,7 +121,7 @@ class Rectangle:
         return (container)
 
     def __del__(self):
-        """Prints a message when a rectangle is deleted.
+        """Prints a message when a rectangle instance is deleted.
         It also decrement the counter during each instance deletion."""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")

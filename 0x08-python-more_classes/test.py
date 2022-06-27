@@ -8,7 +8,7 @@ my_rectangle_1.print_symbol = "&"
 print(my_rectangle_1)
 print("--")
 
-my_rectangle_2 = Rectangle(2, 1)
+my_rectangle_2 = Rectangle(2, 0)
 print(my_rectangle_2)
 print("--")
 Rectangle.print_symbol = "C"
