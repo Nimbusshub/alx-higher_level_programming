@@ -155,5 +155,4 @@ class Rectangle:
         Returns:
             square: new instance of rectangle as square.
         """
-
         return cls(size, size)
