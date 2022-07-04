@@ -1,0 +1,74 @@
+=================================================
+""" a test case for the 1-my_list.py """
+=================================================
+
+-------------------------------------------------
+imports the module in ../1-my_list.py
+-------------------------------------------------
+>>> MyList = __import__('1-my_list').MyList
+
+
+-------------------------------------------------
+test cases
+-------------------------------------------------
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+>>> my_list = MyList(name)
+Traceback (most recent call last):
+...
+NameError: name 'name' is not defined
+
+>>> my_list = MyList(4)
+Traceback (most recent call last):
+...
+TypeError: 'int' object is not iterable
+
+>>> my_list = MyList(4.1)
+Traceback (most recent call last):
+...
+TypeError: 'float' object is not iterable
+
+>>> my_list = MyList("string")
+>>> print(my_list)
+['s', 't', 'r', 'i', 'n', 'g']
+
+>>> my_list.print_sorted()
+['g', 'i', 'n', 'r', 's', 't']
+
+>>> print(my_list)
+['s', 't', 'r', 'i', 'n', 'g']
+
+>>> my_list = MyList([5, 3, "busayo"])
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+...
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+>>> my_list = MyList([5, 3, 3], 7)
+Traceback (most recent call last):
+...
+TypeError: list expected at most 1 argument, got 2
+
+>>> my_list = MyList({"s": 3, "r": 35})
+>>> print(my_list)
+['s', 'r']
+
+>>> my_list.print_sorted()
+['r', 's']
+
+>>> my_list = MyList([5])
+>>> my_list.append(1)
+>>> my_list.print_sorted()
+[1, 5]
