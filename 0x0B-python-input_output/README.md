@@ -4,6 +4,8 @@
 
 ## Files In The Directory
 
+**All .txt files are files created while testing the functionality of the functions created.**
+
 | Filename                   | Description                                                                                                         |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | `0-read_file.py`           | A function that reads a text file and prints it to stdout                                                           |
