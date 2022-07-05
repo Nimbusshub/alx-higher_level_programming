@@ -50,6 +50,13 @@ Traceback (most recent call last):
 IndentationError: expected an indented block
 
 
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", -5)
+Traceback (most recent call last):
+...
+ValueError: name must be greater than 0
+    
+    
 >>> bg = BaseGeometry(56)
 Traceback (most recent call last):
 ...
@@ -75,6 +82,9 @@ Traceback (most recent call last):
 ...
 AttributeError: 'list' object has no attribute 'integer_validator'
 
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", 5)
+    
 
 >>> bg = BaseGeometry
 >>> bg.integer_validator()
