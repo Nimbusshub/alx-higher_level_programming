@@ -1,0 +1,90 @@
+==========================================
+7-base_geometry.py test case
+==========================================
+
+------------------------------------------
+import module
+------------------------------------------
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+------------------------------------------
+ALX test cases
+------------------------------------------
+
+>>> bg = BaseGeometry()
+
+>>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator("width", 89)
+
+>>> try:
+...     bg.integer_validator("name", "John")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+[TypeError] name must be an integer
+
+>>> try:
+...     bg.integer_validator("age", 0)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+[ValueError] age must be greater than 0
+
+>>> try:
+...     bg.integer_validator("distance", -4)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] distance must be greater than 0
+
+
+--------------------------------------------
+my test cases
+--------------------------------------------
+
+>>> try:
+... bg.integer_validator("distance", -4)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+Traceback (most recent call last):
+...
+IndentationError: expected an indented block
+
+
+>>> bg = BaseGeometry(56)
+Traceback (most recent call last):
+...
+TypeError: BaseGeometry() takes no arguments
+
+
+>>> bg = BaseGeometry(busayo)
+Traceback (most recent call last):
+...
+NameError: name 'busayo' is not defined
+
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int")
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+
+>>> bg = []
+>>> bg.integer_validator("width", 89)
+Traceback (most recent call last):
+...
+AttributeError: 'list' object has no attribute 'integer_validator'
+
+
+>>> bg = BaseGeometry
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
+
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
