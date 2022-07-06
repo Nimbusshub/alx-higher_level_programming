@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-import json
 """Function that serialized a data with json.
 """
+import json
 
 
 def to_json_string(my_obj):
@@ -10,6 +10,5 @@ def to_json_string(my_obj):
     Returns:
         Serialized (str): the JSON representation of an object.
     """
-
     serialized = json.dumps(my_obj)
     return(serialized)
