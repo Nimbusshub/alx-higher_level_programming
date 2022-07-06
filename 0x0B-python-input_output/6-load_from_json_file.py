@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""A function that creates an object from a "json fle" """
+"""A function that creates an object from a "json file" """
 import json
 
 
