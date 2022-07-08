@@ -131,7 +131,10 @@ class Rectangle(Base):
 
     def display(self):
         """Method prints the rectangle instance with the character # to the stdout"""
+        for i in range(self.__x):
+            print("", file=sys.stdout)
         for i in range(self.__height):
+            # print(" " * self.__y, file=sys.stdout)
             print("#" * self.__width, file=sys.stdout)
 
     def __str__(self):
