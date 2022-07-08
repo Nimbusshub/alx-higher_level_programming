@@ -3,6 +3,7 @@
 """A class Rectangle that inherits from class Base"""
 
 from models.base import Base
+import sys
 
 
 class Rectangle(Base):
@@ -127,3 +128,8 @@ class Rectangle(Base):
             the area of the class Rectangle
         """
         return self.__height * self.__width
+
+    def display(self):
+        """Method prints the rectangle instance with the character # to the stdout"""
+        for i in range(self.__height):
+            print("#" * self.__width, file=sys.stdout)
