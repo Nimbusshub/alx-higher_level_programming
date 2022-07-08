@@ -133,3 +133,12 @@ class Rectangle(Base):
         """Method prints the rectangle instance with the character # to the stdout"""
         for i in range(self.__height):
             print("#" * self.__width, file=sys.stdout)
+
+    def __str__(self):
+        """Define the behaviour of the class Rectangle when called"""
+        str_class = "[Rectangle]"
+        str_id = " ({}) ".format(self.id)
+        str_xy = "{}/{} - ".format(self.__x, self.__y)
+        str_wh = "{}/{}".format(self.__width, self.__height)
+
+        return str_class + str_id + str_xy + str_wh
