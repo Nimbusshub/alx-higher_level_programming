@@ -130,7 +130,8 @@ class Rectangle(Base):
         return self.__height * self.__width
 
     def display(self):
-        """Method prints the rectangle instance with the character # to the stdout"""
+        """Method prints the rectangle instance with the
+        character # to the stdout"""
         for i in range(self.__y):
             print("", file=sys.stdout)
         for i in range(self.__height):
@@ -147,19 +148,23 @@ class Rectangle(Base):
         return str_class + str_id + str_xy + str_wh
 
     def update(self, *args, **kwargs):
+        """Assigns to attributes the lists in args or kwargs
+        as implemented in the function.
+
+        Args:
+            *args: list of arguments to initialize the
+            attributes with.
+            **kwargs: dictionary of arguments to initialize
+            the attributes with if no arguments is passed
+            to *args.
+        """
         update_list = ["id", "width", "height", "x", "y"]
-        counter1 = 0
-        counter2 = 0
+        counter = 0
 
         if args is not None and len(args) > 0:
             for i in args:
-                setattr(self, update_list[counter1], i)
-                counter1 += 1
+                setattr(self, update_list[counter], i)
+                counter += 1
         else:
             for key, value in kwargs.items():
-                counter2 = 0
-                while True:
-                    if key == update_list[counter2]:
-                        setattr(self, update_list[counter2], value)
-                        break
-                    counter2 += 1
+                setattr(self, key, value)
