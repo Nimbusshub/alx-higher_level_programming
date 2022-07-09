@@ -145,3 +145,18 @@ class Rectangle(Base):
         str_wh = "{}/{}".format(self.__width, self.__height)
 
         return str_class + str_id + str_xy + str_wh
+
+    def update(self, *args):
+        counter = 0
+        for i in args:
+            if counter == 0:
+                self.id = i
+            elif counter == 1:
+                self.__width = i
+            elif counter == 2:
+                self.__height = i
+            elif counter == 3:
+                self.__x = i
+            elif counter == 4:
+                self.__y = i
+            counter += 1
