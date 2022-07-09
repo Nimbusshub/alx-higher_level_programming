@@ -149,14 +149,15 @@ class Rectangle(Base):
     def update(self, *args):
         counter = 0
         for i in args:
-            if counter == 0:
-                self.id = i
-            elif counter == 1:
-                self.__width = i
-            elif counter == 2:
-                self.__height = i
-            elif counter == 3:
-                self.__x = i
-            elif counter == 4:
-                self.__y = i
-            counter += 1
+            if isinstance(i, int):
+                if counter == 0:
+                    self.id = i
+                elif counter == 1:
+                    self.__width = i
+                elif counter == 2:
+                    self.__height = i
+                elif counter == 3:
+                    self.__x = i
+                elif counter == 4:
+                    self.__y = i
+                counter += 1
