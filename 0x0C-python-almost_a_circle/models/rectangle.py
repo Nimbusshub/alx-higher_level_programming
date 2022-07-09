@@ -146,18 +146,20 @@ class Rectangle(Base):
 
         return str_class + str_id + str_xy + str_wh
 
-    def update(self, *args):
-        counter = 0
-        for i in args:
-            if isinstance(i, int):
-                if counter == 0:
-                    self.id = i
-                elif counter == 1:
-                    self.__width = i
-                elif counter == 2:
-                    self.__height = i
-                elif counter == 3:
-                    self.__x = i
-                elif counter == 4:
-                    self.__y = i
-                counter += 1
+    def update(self, *args, **kwargs):
+        update_list = ["id", "width", "height", "x", "y"]
+        counter1 = 0
+        counter2 = 0
+
+        if args is not None and len(args) > 0:
+            for i in args:
+                setattr(self, update_list[counter1], i)
+                counter1 += 1
+        else:
+            for key, value in kwargs.items():
+                counter2 = 0
+                while True:
+                    if key == update_list[counter2]:
+                        setattr(self, update_list[counter2], value)
+                        break
+                    counter2 += 1
