@@ -30,13 +30,15 @@ class Square(Rectangle):
         """property getter: retrieve the value of size
         of the Square
 
-        size.setter: set the value of self.__width.
+        size.setter: set the value of self.width and
+        self.height.
         Args:
-            value(int): value to initialize self.width with.
+            value(int): value to initialize self.width and
+            self.height with.
 
-        Exceptions: Raises
-        TypeError: if value is not an integer
-        ValueError: if value is <= 0
+        Raises:
+            TypeError: if value is not an integer
+            ValueError: if value is <= 0
         """
         return self.width
 
@@ -51,6 +53,16 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        """Assigns to attributes the lists in args or kwargs
+        as implemented in the function.
+
+        Args:
+            *args: list of arguments to initialize the
+            attributes with.
+            **kwargs: dictionary of arguments to initialize
+            the attributes with if no arguments is passed
+            to *args.
+        """
         if args is not None and len(args) > 0:
             list_args = ["id", "size", "x", "y"]
             counter = 0
@@ -63,7 +75,7 @@ class Square(Rectangle):
                 counter += 1
 
         else:
-            for key, value in kwargs:
+            for key, value in kwargs.items():
                 if key == "size":
                     setattr(self, "width", value)
                     setattr(self, "height", value)
