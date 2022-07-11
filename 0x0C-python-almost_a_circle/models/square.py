@@ -83,7 +83,7 @@ class Square(Rectangle):
                     setattr(self, key, value)
 
     def to_dictionary(self):
-        """"""
+        """Return the Square attributes as a dictionary"""
         square_list = ['size', 'x', 'y', 'id']
         dictionary = {}
 
