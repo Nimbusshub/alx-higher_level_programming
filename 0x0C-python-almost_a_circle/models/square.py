@@ -81,3 +81,15 @@ class Square(Rectangle):
                     setattr(self, "height", value)
                 else:
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """"""
+        square_list = ['size', 'x', 'y', 'id']
+        dictionary = {}
+
+        for index in square_list:
+            if index == "size":
+                dictionary[index] = getattr(self, "width")
+            else:
+                dictionary[index] = getattr(self, index)
+        return dictionary
