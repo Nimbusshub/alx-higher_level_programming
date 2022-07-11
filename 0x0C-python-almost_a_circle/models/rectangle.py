@@ -3,7 +3,6 @@
 """A class Rectangle that inherits from class Base"""
 
 from models.base import Base
-import sys
 
 
 class Rectangle(Base):
@@ -168,3 +167,10 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+        def to_dictionary(self):
+            dict_list = ['x', 'y', 'id', 'height', 'width']
+            dictionary = {}
+            for i in dict_list:
+                dictionary[i] = getattr(self, i)
+            return dictionary
