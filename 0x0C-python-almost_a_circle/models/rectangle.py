@@ -168,9 +168,10 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
-        def to_dictionary(self):
-            dict_list = ['x', 'y', 'id', 'height', 'width']
-            dictionary = {}
-            for i in dict_list:
-                dictionary[i] = getattr(self, i)
-            return dictionary
+    def to_dictionary(self):
+        """Return the Rectangle attributes as a dictionary"""
+        dict_list = ['id', 'width', 'height', 'x', 'y']
+        dictionary = {}
+        for i in dict_list:
+            dictionary[i] = getattr(self, i)
+        return dictionary
