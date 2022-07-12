@@ -3,6 +3,7 @@
 """A class Rectangle that inherits from class Base"""
 
 from models.base import Base
+import sys
 
 
 class Rectangle(Base):
@@ -162,8 +163,9 @@ class Rectangle(Base):
 
         if args is not None and len(args) > 0:
             for i in args:
-                setattr(self, update_list[counter], i)
-                counter += 1
+                if counter < 5:
+                    setattr(self, update_list[counter], i)
+                    counter += 1
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
