@@ -67,12 +67,13 @@ class Square(Rectangle):
             list_args = ["id", "size", "x", "y"]
             counter = 0
             for i in args:
-                if counter == 1:
-                    setattr(self, "width", i)
-                    setattr(self, "height", i)
-                else:
-                    setattr(self, list_args[counter], i)
-                counter += 1
+                if counter < 4:
+                    if counter == 1:
+                        setattr(self, "width", i)
+                        setattr(self, "height", i)
+                    else:
+                        setattr(self, list_args[counter], i)
+                    counter += 1
 
         else:
             for key, value in kwargs.items():
