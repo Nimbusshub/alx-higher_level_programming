@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Definition of class Base with its attribute"""
+"Definition of class Base with its attribute"""
 import json
 
 
@@ -54,4 +54,12 @@ class Base:
             return []
         return json.loads(json_string)
 
-
+    @classmethod
+    def create(cls, **dictionary):
+        """ Create an instance """
+        if cls.__name__ == "Rectangle":
+            new = cls(10, 10)
+        else:
+            new = cls(10)
+        new.update(**dictionary)
+        return new
