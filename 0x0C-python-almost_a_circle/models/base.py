@@ -2,7 +2,7 @@
 "Definition of class Base with its attribute"""
 
 import json
-import os.path
+import os
 import csv
 
 
@@ -70,21 +70,14 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """ Returns a list of instances """
-        filename = "{}.json".format(cls.__name__)
+        filename = str(cls.__name__) + ".json"
 
-        if os.path.exists(filename) is False:
-            return []
-
-        with open(filename, 'r') as f:
-            list_str = f.read()
-
-        list_cls = cls.from_json_string(list_str)
-        list_ins = []
-
-        for index in range(len(list_cls)):
-            list_ins.append(cls.create(**list_cls[index]))
-
-        return list_ins
+        try:
+            with open(filename, encoding="utf-8") as file:
+                json_dict = cls.from_json_string(file.read())
+                return [cls.create(**jd) for jd in json_dict]
+        except IOError:
+            return "[]"
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
