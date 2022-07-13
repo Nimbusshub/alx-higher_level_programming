@@ -36,7 +36,7 @@ Each class contains public/private attibutes, class and static methods. Also, th
 
 Inside `tests/test_models` folder:
 
-**The folder that tests the classes functionality\*\*
+**The folder that tests the classes functionality**
 
 | Filename            | Description                                         |
 | ------------------- | --------------------------------------------------- |
