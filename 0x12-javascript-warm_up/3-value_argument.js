@@ -2,5 +2,5 @@
 
 const argvP = process.argv[2];
 
-if (!argvP) console.log("No argument");
+if (!argvP) console.log('No argument');
 else console.log(argvP);
