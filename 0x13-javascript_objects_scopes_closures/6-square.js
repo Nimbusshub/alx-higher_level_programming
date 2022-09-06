@@ -7,10 +7,10 @@ class Square extends SquareSC {
     if (c) {
       for (let j = 0; j < this.height; j++) {
         const temp = [];
-        for (let i = 0; i < this.height; i++) temp.push('C');
+        for (let i = 0; i < this.height; i++) temp.push(c);
         console.log(temp.join(''));
       }
-    } else this.print();
+    } else super.print();
   }
 }
 
