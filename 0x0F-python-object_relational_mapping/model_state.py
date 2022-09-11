@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 """Definition of a class State with module SQLAlchemy"""
+import sys
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
