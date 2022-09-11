@@ -12,7 +12,8 @@ if __name__ == '__main__':
         user=sys.argv[1], passwd=sys.argv[2], port=3306, db=sys.argv[3])
     curs = condb.cursor()
     curs.execute("SELECT * FROM states\
-        WHERE `name` = '{input}'".format(input=sys.argv[4]))
+        WHERE CONVERT(`name` USING latin1)\
+        COLLATE Latin1_General_CS = '{input}'".format(input=sys.argv[4]))
 
     states = curs.fetchall()
     for state in states:
