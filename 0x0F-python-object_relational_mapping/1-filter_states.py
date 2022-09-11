@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 """ A script that lists all states starting with N """
+
 if __name__ == '__main__':
     import MySQLdb
     import sys
