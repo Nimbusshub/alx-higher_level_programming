@@ -6,7 +6,7 @@ if __name__ == '__main__':
     import sys
 
 condb = MySQLdb.connect(
-    user=sys.argv[1], password="PassAlx1!!!", db=sys.argv[2], port=3306)
+    user=sys.argv[1], password=sys.argv[2], db=sys.argv[3], port=3306)
 curs = condb.cursor()
 curs.execute("SELECT * FROM states")
 states = curs.fetchall()
