@@ -9,7 +9,7 @@ if __name__ == '__main__':
     import sys
 
     condb = MySQLdb.connect(
-        user=sys.argv[1], passwd='PassAlx1!!!', port=3306, db=sys.argv[3])
+        user=sys.argv[1], passwd=sys.argv[2], port=3306, db=sys.argv[3])
     curs = condb.cursor()
     curs.execute("SELECT * FROM states\
         WHERE CONVERT(`name` USING latin1)\
