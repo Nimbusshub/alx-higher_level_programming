@@ -1,0 +1,10 @@
+else:
+    if (len(args_split) == 1):
+        print(eval(args_split[0])().id)
+        storage.save()
+    # newly added
+    else:
+        key = args_split[0] + "." + eval(args_split[0])().id
+        setattr(storage.all()[key], args_split[1], args_split[2])
+        print(eval(args_split[0])().id)
+        storage.all()[key].save()
