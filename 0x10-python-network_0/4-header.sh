@@ -1,3 +1,3 @@
 #!/bin/bash
-# Bash script that takes in a URL as an argument, displays the body of the response
+# GEt and displays response body, adding header variable with parameter
 curl -sH "X-School-User-Id: 98" "$1"
