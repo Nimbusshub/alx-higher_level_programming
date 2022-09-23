@@ -2,9 +2,6 @@
 """Takes in a letter and sends a POST request
 to a url with the letter as a parameter."""
 
-from http.client import ResponseNotReady
-
-
 if __name__ == '__main__':
     import sys
     import requests
