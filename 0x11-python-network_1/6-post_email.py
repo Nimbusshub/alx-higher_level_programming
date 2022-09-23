@@ -3,9 +3,6 @@
 with the email as a parameter,
 and finally displays the body of the response."""
 
-from urllib import response
-
-
 if __name__ == "__main__":
     import sys
     import requests
