@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """Fetches https://alx-intranet.hbtn.io/status"""
-from base64 import decode
-from encodings import utf_8
 import urllib.request
 
 url_req = urllib.request.Request('https://alx-intranet.hbtn.io/status')
