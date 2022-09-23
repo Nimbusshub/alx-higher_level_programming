@@ -10,6 +10,7 @@ if __name__ == '__main__':
     import requests
 
     url = "https://api.github.com/user"
-    response = requests.get(url, auth=(sys.argv[1], sys.argv[2]))
+    response = requests.get(
+        url, auth=requests.auth.HTTPBasicAuth(sys.argv[1], sys.argv[2]))
     res_dict = response.json()
     print(res_dict.get('id'))
