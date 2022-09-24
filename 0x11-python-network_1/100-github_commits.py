@@ -10,7 +10,7 @@ if __name__ == '__main__':
     try:
         response = requests.get(url)
         res_dict = response.json()
-        for i in range(1, 10):
+        for i in range(0, 10):
             print("{}: {}".format(res_dict[i].get('sha'), res_dict[i].get(
                 'commit').get('author').get('name')))
     except Exception:
