@@ -2,9 +2,6 @@
 """Take GitHub credentials (username and password) as arguments
 and uses the GitHub API to display users id"""
 
-from os import system
-
-
 if __name__ == '__main__':
     import sys
     import requests
