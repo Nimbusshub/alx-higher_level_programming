@@ -11,3 +11,4 @@
 | 2-statuscode.js        | Display the status code of a get request                                               |
 | 3-starwars_title.js    | Prints the title of a Star Wars movie where the episode number matches a given integer |
 | 4-starwars_count.js    | prints the number of movies where the character “Wedge Antilles” is present            |
+| 5-request_store.js     | Gets the contents of a webpage and stores it in a file.                                |
