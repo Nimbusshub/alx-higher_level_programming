@@ -16,5 +16,5 @@
 | 7-script.js            | JavaScript script that fetches the character name from an api                                                              |
 | 8-script.js            | JavaScript script that fetches and lists the title for all movies by using an api                                          |
 | 9-script.js            | JavaScript script that fetches from an api and displays the value of hello from that fetch in the HTML tag DIV#hello       |
-
-|
+| htmls                  | All html files to run each scripts with                                                                                    |
+| 100-script.js          | JavaScript script that updates the text color of the <header> element to red (#FF0000)                                     |
